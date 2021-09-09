@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.example</groupId>
+  <artifactId>cbfm-ca</artifactId>
+  <version>1.0</version>
+
+  <name>cbfm-ca</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <build>
+    <finalName>cbfm-ca</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+        <transformers>
+					<transformer
+						implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+						<!-- 设置主类  -->
+						<mainClass>org.example.Main</mainClass>
+					</transformer>
+				</transformers>
+          <archive>
+            <manifest>
+              <mainClass>org.example.Main</mainClass>
+            </manifest>
+          </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id> <!-- this is used for inheritance merges -->
+            <phase>package</phase> <!-- bind to the packaging phase -->
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.hyperledger.fabric-sdk-java/fabric-sdk-java -->
+    <!--
+    <dependency>
+        <groupId>org.hyperledger.fabric-sdk-java</groupId>
+        <artifactId>fabric-sdk-java</artifactId>
+        <version>1.4.4</version>
+    </dependency>-->
+    <!-- https://mvnrepository.com/artifact/org.hyperledger.fabric/fabric-gateway-java -->
+    <!-- https://mvnrepository.com/artifact/org.hyperledger.fabric/fabric-gateway-java -->
+  <dependency>
+      <groupId>org.hyperledger.fabric</groupId>
+      <artifactId>fabric-gateway-java</artifactId>
+      <version>1.4.1</version>
+  </dependency>
+
+    <!--
+    <dependency>
+        <groupId>org.hyperledger.fabric</groupId>
+        <artifactId>fabric-gateway-java</artifactId>
+        <version>1.4.1-SNAPSHOT</version>
+    </dependency>-->
+    <!-- https://mvnrepository.com/artifact/junit/junit -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.massisframework/j-text-utils -->
+    <dependency>
+      <groupId>com.massisframework</groupId>
+      <artifactId>j-text-utils</artifactId>
+      <version>0.3.4</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.62</version>
+    </dependency>
+    <!-- jpbc -->
+    <dependency>
+      <groupId>jpbc</groupId>
+      <artifactId>api</artifactId>
+      <version>2.0.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/lib/jpbc-api-2.0.0.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>jpbc</groupId>
+      <artifactId>plaf</artifactId>
+      <version>2.0.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/lib/jpbc-plaf-2.0.0.jar</systemPath>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.owlike/genson -->
+    <!--
+    <dependency>
+        <groupId>com.owlike</groupId>
+        <artifactId>genson</artifactId>
+        <version>1.6</version>
+    </dependency>-->
+
+  </dependencies>
+
+</project>
