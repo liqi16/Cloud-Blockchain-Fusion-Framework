@@ -3,12 +3,13 @@ Implementing the framework from our paper: "CBFF: A Cloud-Blockchain Fusion Fram
 
 In this paper, we propose a Cloud-Blockchain Fusion Framework (CBFF) to relieve the “data island” between multiple clouds. CBFF improves the security of cloud data by designing the cooperation between clouds and blockchain. It designs a unified data Naming and Addressing Mechanism to publish and locate cloud data globally in a multi-cloud environment. Also, it proposes the Operation Tracing Mechanism to achieve reliable operation logging and tracing. With CBFF, we present a prototype implementation system using Hyperledger Fabric blockchain and Alibaba Cloud Computing. Our system could provide secure data uploading, sharing, and updating among multiple clouds. 
 
-##Requirements
+## Requirements
 
   Hyperledger Fabric v1.4.4(https://github.com/hyperledger/fabric/tree/v1.4.4)
   Fabric Samples v1.4.4(https://github.com/hyperledger/fabric-samples/tree/v1.4.4)
 
-##Install
+## Install
+
  - Put folder “cbfm” into ./fabric-samples
  - Put folder chaincode into ./fabric-samples
  - cd ./fabric-samples/cbfm
