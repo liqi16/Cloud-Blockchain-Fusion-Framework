@@ -1,0 +1,56 @@
+/*
+ * Copyright IBM Corp. 2018 All Rights Reserved.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+plugins {
+    id 'com.github.johnrengelman.shadow' version '2.0.3'
+    id 'java'
+}
+
+group 'org.hyperledger.fabric-chaincode-java'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    flatDir{
+    		dirs 'libs'
+    	}
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+    mavenCentral()
+    //maven {
+    //    url "https://repository.mulesoft.org/nexus/content/repositories/public/"
+    //}
+}
+
+dependencies {
+    //compile group: 'org.hyperledger.fabric-chaincode-java', name: 'fabric-chaincode-shim', version: '1.4.5'
+    // https://mvnrepository.com/artifact/org.hyperledger.fabric-chaincode-java/fabric-chaincode-shim
+    //implementation group: 'org.hyperledger.fabric-chaincode-java', name: 'fabric-chaincode-shim', version: '1.4.5'
+    //implementation 'com.owlike:genson:1.5'
+    //compile group: 'com.alibaba', name: 'fastjson', version: '1.2.62'
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    //testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+shadowJar {
+    baseName = 'chaincode'
+    version = null
+    classifier = null
+
+    manifest {
+        attributes 'Main-Class': 'org.hyperledger.fabric.example.SimpleChaincode'
+    }
+}
+
+//task copyJars(type: Copy) {
+//    from configurations.runtime
+//    into 'libs'
+//}
+
+
+//build.dependsOn(copyJars)
