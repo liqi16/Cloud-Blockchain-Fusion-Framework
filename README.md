@@ -16,9 +16,9 @@ In this paper, we propose a Cloud-Blockchain Fusion Framework (CBFF) to relieve 
  - cd ./fabric-samples/cbfm
  - Run the script startFabric.sh to start blockchain network, install smart contract, and instantiate smart contract
  - cd ./ca
- - Run the script compileCA.sh to compile CA program. Run the script runCA.sh to the CA program.
+ - Run the script compileCA.sh to compile CA program. Run the script runCA.sh to start the CA program.
  - cd ../cloud
- - Run the script compileCloud.sh to compile Cloud program. Run the script runCloud.sh to the Cloud program.
+ - Run the script compileCloud.sh to compile Cloud program. Run the script runCloud.sh to start the Cloud program.
  - cd ../client
- - Run the script compileClient.sh to compile Client program. Run the script runClient.sh to the Client program.
+ - Run the script compileClient.sh to compile Client program. Run the script runClient.sh to start the Client program.
 
