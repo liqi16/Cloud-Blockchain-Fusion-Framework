@@ -11,8 +11,8 @@ In this paper, we propose a Cloud-Blockchain Fusion Framework (CBFF) to relieve 
 
 ## Install
 
- - Put folder “cbfm” into ./fabric-samples
- - Put folder chaincode into ./fabric-samples
+ - Put folder "cbfm" into ./fabric-samples
+ - Put folder "chaincode" into ./fabric-samples
  - cd ./fabric-samples/cbfm
  - Run the script startFabric.sh to start blockchain network, install smart contract, and instantiate smart contract
  - cd ./ca
